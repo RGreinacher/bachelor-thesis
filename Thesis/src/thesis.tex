@@ -1,0 +1,91 @@
+\documentclass[a4paper, 11pt]{scrartcl}
+
+% includes
+\usepackage[printonlyused]{acronym}
+\usepackage[english]{babel}
+\usepackage[style = ieee, backend = biber]{biblatex}
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{bbding}
+\usepackage{caption}
+\usepackage{colortbl}
+\usepackage{enumerate}
+\usepackage{epigraph}
+\usepackage{gnuplottex}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{lmodern}
+\usepackage{mathtools}
+\usepackage{parskip}
+\usepackage{pdfpages}
+\usepackage{subfig}
+\usepackage{svg}
+\usepackage{tikz}
+\usepackage{xspace}
+\usepackage{xstring}
+\usepackage{hyperref}
+\usepackage{breakurl}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{eurosym}
+
+% commands
+\input{commands.tex}
+
+% settings
+\selectlanguage{english}
+\setlength\parindent{0pt}
+\bibliography{literature.bib}
+\usetikzlibrary{calc, positioning, arrows, automata}
+\lstset{%
+	basicstyle = \ttfamily,
+	breaklines = true
+}
+
+\begin{document}
+	\pagenumbering{Roman}
+	\input{titlepage.tex}
+	% \null\newpage
+	\null
+	\vfill
+	% \linespread{1.6}
+	\input{disclaimer.tex}
+
+	\pagebreak
+	% \null\newpage
+	\input{abstract.tex}
+
+	\pagebreak
+	\input{acknowledgment.tex}
+
+	\pagebreak
+	\tableofcontents
+
+	\pagebreak
+	\input{acronyms.tex}
+
+	\pagebreak
+	\input{list-of-figures-and-tables.tex}
+
+	\pagebreak
+	\pagenumbering{arabic}
+	\input{1-introduction.tex}
+	\pagebreak
+	\input{2-assistance-system.tex}
+	\pagebreak
+	\input{3-method.tex}
+	% \pagebreak
+	\input{4-results.tex}
+	\pagebreak
+	\input{5-discussion.tex}
+
+	\pagebreak
+	\nocite{*}
+	\printbibliography
+
+	\pagebreak
+	\input{appendix.tex}
+\end{document}

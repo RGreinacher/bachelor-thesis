@@ -1,0 +1,173 @@
+\section{Method}
+	\label{sec:method}
+	To understand the impact of pre-annotated text on the performance of human annotators, to validate Day's~\cite{day1997mixed} findings of increased productivity using pre-annotations and to estimate whether the development of such a pre-annotation system will pay off, a comprehensive study was conducted. For this, the assistance system was simulated and statistically tested using the example task of annotating data for \ac{NER}. Furthermore we discuss mistakes the assistance makes and what annotation mistakes of machine and human look like.
+
+	\subsection{Sample}
+		To receive insightful results we computed a statistical power analysis using the \textit{G* Power 3}~\cite{faul2007g} tool.\footnote{The freeware \textit{G* Power 3} can be downloaded from \urlWithDate{http://www.gpower.hhu.de/}.}
+		Since we planned to conduct our main results using an \ac{ANOVA}, we used the \textit{\ac{ANOVA}: Fixed effects, omnibus, one-way} test with the following parameters:
+		\begin{itemize}
+			\item Effect size \(f\): 0.4 (large effect cf.~Cohen~\cite{cohen1977statistical})
+			\item \(\alpha\): 0.05
+			\item Power (\(1 - \beta\)): 0.8
+			\item Number of Groups: 3
+		\end{itemize}
+
+		This analysis resulted in \(n \geq 66\) participants. We recruited participants using the \lqq probandenportal\rqq from the \textit{Technische Universität Berlin} as well as via personal invitations.\footnote{The \lqq probandenportal\rqq from the \textit{Technische Universität Berlin}: \urlWithDate{https://proband.ipa.tu-berlin.de/}}
+		All participants were tested in lab conditions to control outside influences; they all were tested during daytime with natural light from the windows in the same, quiet environment on equal instruments and under equal conditions.
+
+		All participants spoke German fluently and none suffered from color blindness of any kind.
+
+		In the beginning of the experiment we incentivized with the chance to win one of two shopping vouchers in the lottery between all the participants or to receive one \lqq VP Stunde\rqq as a reward for their participation.\footnote{It is common practice at the chair where the study was conducted to offer \lqq VP stunden\rqq to participating students as a motivation. All students at this chair are required to collect at least ten \lqq VP stunden\rqq during their degree course.}
+		Since we did not find enough participants we changed the reward to 10~\euro~for the 20 last participants.
+
+	\subsection{Apparatus}
+		All participants conducted the study on a laptop (MacBook Air 6.1 with an 11 inch display and a resolution of \(1366 \times 768\) pixels). A mouse on a mousepad was connected to the laptop to be used by the participants. The documents for the study were a single page of terms and conditions as well as a short description of the task, a double page document of annotation guidelines and a single page document describing functions of the interface they were going to use (see Appendix~\ref{sec:appendixStudyMaterial}).
+
+		\subsubsection{Annotation Interface}
+			\label{sec:methodApparatusUI}
+			The tool the participants used was the annotation interface for sequence labeling of the \ac{DALPHI} annotation framework (see Appendix~\ref{appendixDalphiDev} for a link to the software itself). This interface is a web app that ran in full screen mode, see Figure~\ref{fig:DalphiAnnotationUIWithAnnotations} for an exemplary screenshot.
+
+			\singleFullSizeFig{3/DalphiWithAnnotations.png}{The \ac{DALPHI} \ac{UI} for text annotations.}{DalphiAnnotationUIWithAnnotations}
+
+			All the \ac{UI} elements the participants could use are the two example labels above the grey paragraph container to select the label (category) of the current selected annotation, the container itself and the \lqq save annotation\rqq button below the container. Within the container, every word was clickable to create a new annotation. Several interactions with annotations and the mouse or the keyboard were possible to modify annotations (change span or label or to remove it), the document \lqq Funktionen des Annotationsinterfaces\rqq (see Appendix~\ref{sec:appendixStudyMaterial}) that was available to the participants as well, provides a detailed description of all the functions of the \ac{UI}.
+
+			The text container itself displayed one out of 73 paragraphs of German running text (with 305 sentences and approximately 6000 words in total). After one paragraph was processed, the annotations were saved and the next one was displayed. The text to work with consisted of 14 recent news articles from different sources, chosen by total length and count of possible annotations (original texts in Appendix~\ref{appendixStudyTexts}). We compiled the collection to be as diverse as possible in order to mute performance differences of the participants with different expertise and affinity to different subjects.
+
+		\subsubsection{Assistance System}
+			The assistance we used for the study was simulated as described in Section~\ref{sec:simulationOfTheAssistanceSystem}. The study phase was divided into four blocks of approximately equal amounts of annotations (see Figure~\ref{fig:FourBlocksToggelesAssistance}). The assistance was presented in two out of four blocks which we discuss in more detail in Section~\ref{sec:methodDesignAndVars}.
+
+			\singleFullSizeFig{3/SimpleDesignStructure.png}{Four blocks of the study, the assistance's presence was toggled.}{FourBlocksToggelesAssistance}
+
+			According to gold standard there were 310 spots to annotate in the entire text. To distribute the annotations as equally as possible between the four blocks, we put between 76 and 79 correct annotations into each block. Each block had to contain an entire paragraph. Since we used real texts we couldn't control the number of annotations per paragraph perfectly, which explains the small differences between the number of annotations per block.
+
+		\subsubsection{Questionnaires}
+			\label{sec:apparatusQuestionnaires}
+			After each block, the participants were asked to fill in a questionnaire about how they felt in terms of perceived workload and monotony of the task. Additionally we asked them how they would estimate the reliability and the correctness of the assistance. These questionnaires were embedded into the \ac{UI} the participants worked with; after a block of annotations the questionnaires appeared on the same screen. See Figure~\ref{fig:questionnaireIntermediate4} (in Appendix~\ref{sec:appendixQuestionnaires}) for a screenshot of the questionnaire.
+
+			Lastly, after all annotation blocks and their related questionnaires were completed, the participants were asked to fill in a demographic questionnaire (see Figure~\ref{fig:questionnaireDemog}, Appendix~\ref{sec:appendixQuestionnaires}).
+
+	\subsection{Procedure}
+
+		The procedure of the study was divided into three phases: Participants started with the preparation phase, made their own experiences with the annotation \ac{UI} in the training phase and annotated their texts alone in the experimental phase.
+
+		\paragraph{Preparation Phase}
+			The instructor sat next to the participants during the three preparation steps and participants were encouraged to ask questions right away.
+
+			\begin{enumerate}
+				\item Participants received a document that described the following study and gave them a general idea what it was about and why this was interesting. The same sheet contained a section about their consent to participate, which they had to sign before proceeding (see Appendix~\ref{sec:appendixStudyMaterialConsent}).
+				\item The participants then read the annotation guidelines. These should help whenever the participants were not sure how to annotate something and explained their task with several examples. This document was available to the participants for the whole time of the study so that they could take a look at it whenever they wanted to (see Appendix~\ref{sec:appendixStudyMaterialGuidelines}).
+				\item Finally, the participants read a document about the interface they were going to use. All of the interface's functions were explained in the document (see Appendix~\ref{sec:appendixStudyMaterialFunctions}). While they read it the instructor presented each of the explained functionalities using the interface.
+			\end{enumerate}
+
+		\paragraph{Training Phase}
+			After the participants were finished, the instructor asked them to try out each of the described functions on their own to make sure every part of the interface was well understood. For this they were asked to complete a task for each of the interface's functions. While doing so they were allowed to read the guidelines and the interface's description. Additionally they could ask for help.
+
+		\paragraph{Experimental Phase}
+			The participants were asked to annotate person and organization names in the whole corpus using the interface described in Section~\ref{sec:methodApparatusUI}. Participants were instructed that their goal was to complete all texts. There was no time restriction. Additionally, the participants were asked to fill in the questionnaires as described in Section~\ref{sec:apparatusQuestionnaires}. The annotation, as well as the questionnaires, were processed within the \ac{DALPHI} framework; no contextual change was required.
+
+			Participants completed the study itself on their own and without having the instructor sit next to them. Instead, the instructor sat in the same room, but several meters away and without facing the participants in order to avoid distractions and to not convey the feeling of being observed. They were allowed and encouraged to ask for help whenever they needed it. If a question was about a technical detail the instructor helped and answered distinctly; if the question was about what to do or how to annotate a certain sentence, the instructor replied with an example from the guidelines and asked if the subject could find a similar case that is described in the guidelines on their own. The instructor never revealed the direct solution.
+
+	\subsection{Data Analysis}
+		After the participants annotated their texts, the results were 66 different annotated but textually identical corpora. We created a data preprocessing pipeline to match each annotated text with the gold standard. This way we could quantify which annotations were correct, missing or of one of the error types described in Table~\ref{tab:annotationErrors}. As a result, this pipeline generated a data frame we used for our statistical analysis.
+
+		For our hypothesis tests (see Section~\ref{sec:hypotheses}) we employed one sample T-Tests and ANOVA. Theses tests make the assumptions of normal distributed data and of homogeneity of variances~\cite{field2012discovering}.\footnote{Besides other assumptions like a proper scale of measurement or a random sample.}
+		To test if these assumptions hold, we used the \textit{Shapiro-Wilk test}~\cite{shapiro1965analysis} to test a data (sub-)set for normal distribution and \textit{Levene's test}~\cite{levene1960robust} to test if the assumption of homogeneity of variances holds for a given data (sub-)set.
+
+		If the assumptions of the tests were not met, we used non-parametric alternative tests that do not rely on these assumptions. In the case of a not normally distributed data set, we used \textit{Wilcox' Robust Statistics}, which uses a one-way comparison of multiple trimmed group means~\cite{mair2016robust}. If the homogeneity of variances was violated, \textit{Welch's F}~\cite{welch1951comparison} was employed.
+
+		To contrast two groups against each other, if an ANOVA Test is significant, two T-tests were conducted to discriminate which of the three different assistance levels were accountable for the significant impact. Since all our hypothesis were based on the assumption \lqq the better the assistance, the better the human performance\rqq, only two out of the three possible comparisons were made. Namely \(10\%\) vs. \(50\%\) and \(50\%\) vs. \(90\%\), but never \(10\%\) vs. \(90\%\). For that we used the \textit{Bonferroni adjustment}~\cite{bonferroni1936teoria} to decrease our \(\alpha\)-level to \(0.025\) since we conducted only two post-hoc tests.
+
+	\subsection{Experimental Design and Variables}
+		\label{sec:methodDesignAndVars}
+		\singleFullSizeFig{3/DesignStructure.png}{The phases of the study for all groups.}{DesignStructure}
+
+		The study was built as a \(3 \times 2\) mixed design: The corpus was equal for all participants. It differed in the pre-annotations it had; these were balanced between the participants. Each participant was assigned to one of the three different levels of the assistance (\(10\%\), \(50\%\) and \(90\%\) correct pre-annotations). In addition to that, the assistance system was alternating between being present and not being present (two out of four blocks each). If a participant started with the assistance, the following block would be without it and vice versa. We toggled whether a participant started with the assistance in the first block or not, so we ended up with half of the participants having started with the assistance system, and the other without it. This factor was used for balancing purposes only.
+
+		To measure only the impact of the assistance system but not the individual performance we condensed these four blocks computing the difference between a block with assistance minus the previous or following block without assistance. As a result, we obtained two measurement points of time, a first one and a second one; each describing a relative change leading back to the assistance system. Figure~\ref{fig:DesignStructure} depicts this structure, showing all three different groups of assistance levels, measurement points of time and when the questionnaires were shown.
+
+		\paragraph{Independent Variables}
+		The described \(3 \times 2\) mixed design contains two independent variables: level of assistance and point of time measurement. The level of the assistance system has three distinctions: 10\%, 50\% and 90\%. This was operationalized through the simulated pre-annotation process using the gold standard template method described in Section~\ref{sec:simulationOfTheAssistanceSystem}. The second variable is the point of time measurement, namely the first half or the second half of the study (both halves combine the difference of two blocks, so two halves contain results from all four blocks). A third independent variable, indicating whether a participant started with or without the assistance, was a control variable which we balanced. It will not be considered any further.
+
+		\paragraph{Dependent Variables}
+		As described in Section~\ref{sec:approachEfficiency}, we were interested in examining the impact of the assistance regarding the annotation efficiency. We identified three relevant performance dimensions: \textbf{Correctness} (how many annotations have been annotated correctly?), \textbf{misses} (how many annotations have been missed?) and \textbf{tempo} (what ist the average time spent per correct annotation?). Therefore we were interested in analyzing how these parameters were affected by the assistance system. The differences we computed between two blocks were percentages in the case of correctness and misses, and seconds in the case of tempo.
+
+		\pagebreak
+
+		\paragraph{Operationalization}
+		One dependent variable was the processing time of a whole paragraph in seconds (for technical reasons we could not measure the processing time of each annotation individually). To derive the processing time of a single, correct annotation (in which we were actually interested in), we computed the average processing time by summarizing the processing time of all paragraphs per block and divided it using the total count of correct annotations of the same block.
+
+		The other dependent variable was the set of all the annotations each participant created. From these sets of annotations we derived two more meaningful variables that the plain annotations themselves constitute: The percentage of correct annotations and the percentage of missed annotations. We obtained these values using the gold standard matching technique and computed the two desired percentages for each block.
+
+		As already mentioned, we then computed the differences between assistance and no assistance of all of these three per-block-values. We subtracted each of the values of a block with assistance minus one block without assistance. We did so for the first, as well as the second half. This way we compared only the influence the assistance had on the participants, rather than individual performance differences.\\
+		For the following hypotheses A, B and C we computed the average of the differences of the first and the second half per participant. For these hypotheses we were just interested in a general influence of the assistance system, therefore we combined the data from the two halves.
+
+	\subsection{Hypotheses}
+		\label{sec:hypotheses}
+		Generally, we expected that the assistance system would increase an annotator's performance in every of the three performance dimensions. Here we just list the alternative hypotheses; the corresponding \(H0\)s (the assistance system does not increase respectively decrease a performance dimension) are given implicitly.
+
+		Regarding the \textbf{correctness} we therefore formulated the following three hypotheses:
+
+		\begin{enumerate}[{A}i)]
+			\item A \(10\%\) correct assistance system increases the correctness of annotations compared to annotations done without the assistance.
+			\item A \(50\%\) correct assistance system increases the correctness of annotations compared to annotations done without the assistance.
+			\item A \(90\%\) correct assistance system increases the correctness of annotations compared to annotations done without the assistance.
+		\end{enumerate}
+		\vspace{0.5cm}
+
+		\pagebreak
+
+		Regarding the \textbf{tempo} we formulated the following three hypotheses:
+
+		\begin{enumerate}[{B}i)]
+			\item A \(10\%\) correct assistance system decreases the average time needed for one annotation, compared to annotations done without the assistance.
+			\item A \(50\%\) correct assistance system decreases the average time needed for one annotation, compared to annotations done without the assistance.
+			\item A \(90\%\) correct assistance system decreases the average time needed for one annotation, compared to annotations done without the assistance.
+		\end{enumerate}
+		\vspace{0.5cm}
+
+		And regarding the \textbf{misses} we formulated the following three hypotheses:
+
+		\begin{enumerate}[{C}i)]
+			\item A \(10\%\) correct assistance system decreases the miss rate per block, compared to annotating a block of text done without the assistance.
+			\item A \(50\%\) correct assistance system decreases the miss rate per block, compared to annotating a block of text done without the assistance.
+			\item A \(90\%\) correct assistance system decreases the miss rate per block, compared to annotating a block of text done without the assistance.
+		\end{enumerate}
+		\vspace{0.5cm}
+
+		Finally we wanted to \textbf{compare the impact of the different levels} of the assistance system to each other. Therefore we formulated the following hypotheses:
+
+		\begin{enumerate}[{D}i)]
+			\item The \(50\%\) correct assistance system will increase the influence it has on correctness, compared to the \(10\%\) correct assistance system.
+			\item The \(90\%\) correct assistance system will increase the influence it has on correctness, compared to the \(50\%\) correct assistance system.
+		\end{enumerate}
+		\vspace{0.5cm}
+
+		\begin{enumerate}[{E}i)]
+			\item The \(50\%\) correct assistance system will increase the influence it has on tempo, compared to the \(10\%\) correct assistance system.
+			\item The \(90\%\) correct assistance system will increase the influence it has on tempo, compared to the \(50\%\) correct assistance system.
+		\end{enumerate}
+		\vspace{0.5cm}
+
+		\begin{enumerate}[{F}i)]
+			\item The \(50\%\) correct assistance system will increase the influence it has on the miss rate, compared to the \(10\%\) correct assistance system.
+			\item The \(90\%\) correct assistance system will increase the influence it has on the miss rate, compared to the \(50\%\) correct assistance system.
+		\end{enumerate}
+
+		\vspace{0.5cm}
+		For a short summary of the introduced hypotheses, Table~\ref{tab:Hypotheses} provides an overview.
+
+		\begin{table}[H]\centering
+			\caption{Summary of the hypotheses}
+			\begin{tabular}{clll}
+				\toprule
+				& correctness & tempo & misses \\
+				\midrule
+				$10\%$ correct Assistance & increase (Ai) & decrease (Bi) & decrease (Ci) \\
+				$50\%$ correct Assistance & increase (Aii) & decrease (Bii) & decrease (Cii) \\
+				$90\%$ correct Assistance & increase (Aiii) & decrease (Biii) & decrease (Ciii) \\
+				$10\%$ vs. $50\%$ & increase (Di) & decrease (Ei) & decrease (Fi) \\
+				$50\%$ vs. $90\%$ & increase (Dii) & decrease (Eii) & decrease (Fii) \\
+				\bottomrule
+			\end{tabular}
+			\label{tab:Hypotheses}
+		\end{table}

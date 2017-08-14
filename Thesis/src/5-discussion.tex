@@ -1,0 +1,60 @@
+\section{Discussion}
+	Our research questions guided us to examine if and how it is possible to improve the task of manual data labeling. In particular, we wanted to know if it is possible to increase the performance of the annotators in terms of more correct, faster and more complete annotations. We clearly showed that this is possible -- provided that the assistance has a certain level of correctness. We use our questionnaires in order to answer if we can improve the task itself: According to them we can reduce the perceived workload using the assistance; the system has to be really advanced, though, to have a significant impact on this dimension. However, the assistance did not change the perceived monotony at all. Thus, we could barely improve the task itself, from an annotator's perspective. Nevertheless, we achieved notable results in improving the outcome of text annotations and therefore its efficiency.
+
+	\input{5-1-hypotheses.tex}
+
+	\subsection{Method Discussion}
+		% What ethical issues were raised?
+		% Do the data support an alternative theory?
+		We kept a constant order in which the texts were presented. All the participants saw the same texts in the same order. This decision was made since it was hard to separate the corpus into blocks and documents, equal in count of annotations for all the participants. The paragraphs of the 14 different texts were displayed in the correct, coherent order to maintain a logical connection from one paragraph to the next. To keep things simple we fixed an order of paragraphs applicable to all participants. As a consequence we were not able to show for certain that texts in all blocks are equally demanding in terms of cognitive load. This means that if there was a difference in the perceived complexity of the blocks, it could have influenced the findings we interpreted as caused by the assistance system. Since we shuffled the presence of the assistance system, we minimized this impact; but in order to replicate and improve our findings we suggest to find a way to shuffle the order of the paragraphs as well.
+
+	\subsection{Practical Implications}
+		\label{sec:discussionImplications}
+		An assistance system achieving 90\% of correctness is technically not realistic. The best \ac{NER} systems for the German language currently reach around 80\% in precision and recall~\cite{benikova2014germeval}. If we could create an assistance with an correctness of 90\%, we would probably already have a sufficient training data set. However, to craft an assistance system with 50\% correctness is definitely feasible. We showed that such a system already helps to increase the performance regarding our three performance dimensions.
+
+		The 50\% assistance leads to about 3.7\% percentage points more correct annotations. The baseline here is especially interesting: Without any assistance, our participants achieved 83.9\% correctness on average. Using the 50\% accurate assistance this average correctness increases to around 87,6\%. Reaching the last percentages is always harder than improving the early percentages -- this systems helps getting closer to a fully correct annotated data set (although the system itself made far less correct suggestions).\footnote{This data describes the average performance of a single annotator. In a real world example we would be able to increase this numbers by applying an \textit{inter annotator agreement} as, for example, described in~\cite{brants2000inter}.}
+
+		We would not only improve the quality of the annotations but also save time \textit{(= costs)} with the proposed assistance: A typical corpus for \ac{NLP} tasks contains tens of thousands of sentences and annotations. The GermEval 2014 \ac{NER} corpus~\cite{germEval2014ner} for example is made up of 31.297 sentences and 37.926 named entity annotations. Our participants spent 8.2 seconds on average per correct named entity annotation -- without any assistance. If they had annotated the GermEval corpus at this pace, they would have spent more than two weeks of full time work on this task.\footnote{\((8.2\ seconds\ \times\ 37.926\ annotations) / 3.600\ seconds\ per\ hour / 8\ hours\ per\ day = 10.8\ days\)}
+		We showed that we can reduce the average time per annotation by about 1.7 seconds if we if we employ an assistance system with only 50\% correctness. This saves more than two work days in the illustrated example, a little more than 20\%.\footnote{\((6.5\ seconds\ \times\ 37.926\ annotations) / 3.600\ seconds\ per\ hour / 8\ hours\ per\ day = 8.6\ days\)}
+
+		Finally the same assistance system will reduce the average rate of missed annotations notably about 36\%.
+
+		\paragraph{Should the Assistance Always be Present?}
+		The lowest of the tested assistance levels, providing 10\% accurate suggestions, did not show any significant impact. Looking at the graphs of our data on a descriptive level, a very poor assistance does not help but impair the annotator's performance. Thus we recommend to use the assistance system only if its correctness can be assured to be around 50\% or more. Only like this our findings support the assumption of improving performance by employing an assistance as described.
+
+	\subsection{Further Research Questions}
+		During the analysis of our data we encountered two further research questions:
+
+		\paragraph{A Linear Correlation of the Assistance's Level and its Impact?}
+		We chose a rather simple setup with three distinct correctness levels to create a reliable first impression of the impact such an assistance has on the performance of annotators. These ranged from poor to pessimistically realistic to unrealistic in their quality. We showed that the 50\% accurate assistance provides significant improvements -- thus the assistance should only be enabled when its correctness can be ensured.
+
+		Our findings result in the idea that there might be a linear correlation of the correctness of the assistance and the impact it has on human annotators. This thesis should be validated in a further study. Therefore we suggest to investigate a linear correlation, to find the average interception of the impact and the annotator's performance and to validate this crucial \lqq break even point\rqq with accordingly adjusted levels of the assistance. At this point it's safe to employ the assistance system; and with a growing number of annotations the system will be able to improve itself and thus create more accurate suggestions. In other words: Once we find out the according intercept we can probably benefit from an assistance before it reaches the 50\% correctness label.
+
+		\paragraph{Difference of Mistakes?}
+		\label{sec:discussFurtherResearch}
+		Antother interesting task is the analysis of the different error classes that can occur while annotating and by creating automated suggestions.\footnote{See Table~\ref{tab:annotationErrors} for an overview of possible annotation mistakes.}
+		We assume they are not equally easy to correct for annotators. This first question can be answered by a further investigation of the data we collected. Next, we hope that it is possible to derive special annotation instructions to raise awareness of the most difficult error classes. This should lead to a further improvement of correctness of annotations while using an assistance as we proposed.
+
+	\subsection{Conclusion}
+		Our main hypotheses (groups A, B and C) are supported by the data we analyzed. The sole exception are the hypotheses regarding the assistance system with an correctness of 10\%. A metaphor to describe this situation would be a spell checker software, set to the wrong language. It does underline words as it should, but most of the suggestions are wrong. This also applies to the assistance on its poorest level. It is reasonable that such a system does not support the task -- according to our findings we can say that a minimum level of 50\% correctness is needed to do so. What we did not expect was not being able to find a significant improvement when comparing the different system levels with each other. We only examined the relation between the 10\% and the 50\% correct system, as well as the 50\% and the 90\% correct system.
+
+		Our findings can directly be applied to the annotation systems that are already available -- if they can be extended with an assistance system as described. Especially the \ac{DALPHI} framework profits from our findings -- as all components needed to use the system we described in this work are already present.
+
+		The study supports the findings of Day et al.~\cite{day1997mixed}, especially their assertion on productivity improvement of pre-annotations. Our results extend the findings of Day et al.~\cite{day1997mixed} even further with the analysis of the three performance dimensions we identified: Correctness, tempo and miss rate.\\
+		We also concur with Settles \cite{settles2011closing} in the aspect of reconstructing the benefits \ac{AL} provides for the machine as well as for the human annotator. Furthermore, we refined his conclusion by providing evidence for a pre-labeling system improving the human's performance in three different dimensions that were mentioned above.
+
+		This work successfully showed possibilities to increase the efficiency of text based training data generation. We hope that this study, the \ac{DALPHI} framework and the code we provided, will help to create a larger amount of diverse training data sets. Various languages for example are currently underrepresented in terms of available training corpora. We hope that this work will help to bring (supervised) \ac{ML} technologies to more languages and therefore to more people.
+
+
+	% supporting ideas:
+	% - how the hypothesis has been demonstrated by the new research
+	% - show how the field's knowledge has been changed by the addition of this new data
+	% - start with the interpretation of the results, then moves outwards to contextualize these findings in the general field
+	% - speculate, but must avoid rambling, guessing
+  % - for every experimental result you want to talk about, you find results from other publications bearing the relationship to your result that you want the reader to understand.  Most often, your result either agrees with (corroborates), extends, refines, or conflicts with the other result.
+	%
+	% 1. Begin with a restatement of your research question, followed by a statement about whether or not, and how much, your findings "answer" the question.
+	% 2. Relate your findings to the issues you raised in the introduction. Note similarities, differences, common or different trends.  Show how your study either corroborates, extends, refines, or conflicts with previous findings.
+	% 3. If you have unexpected findings, try to interpret them in terms of method, interpretation, even a restructured hypothesis; in extreme cases, you may have to rewrite your introduction. Be honest about the limitations of your study.
+	% 4. State the major conclusions from your study and present the theoretical and practical implications of your study.
+	% 5. Discuss the implications of your study for future research and be specific about the next logical steps for future researchers.

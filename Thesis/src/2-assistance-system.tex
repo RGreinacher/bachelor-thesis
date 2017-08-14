@@ -1,0 +1,7 @@
+\section{An Annotation Framework with Assistance}
+	We constructed an annotation environment that supports the manual task of annotating data using \ac{ML} to assist the annotator. We explain its mechanics at the example of creating training data for \ac{NER} (Section~\ref{sec:conceptionNERatHeart}). However, the annotation environment is modular and thus capable of creating training data for other applications as well. We discuss the architectural key points of the annotation framework (Section~\ref{sec:implementationWSA}) and, as a proof of concept, we demonstrate an \ac{ML} based assistance system using an \ac{MEC} to identify named entities (Section~\ref{sec:nerWithNLTK}). Finally we explain the mathematical background of the assistance (Section~\ref{sec:algorithmicFoundationMEC}) we implemented.
+
+	Our annotation framework \ac{DALPHI} was designed to assist the human doing the annotations with pre-annotations, \ac{AL} support, and offers an iterative work cycle.	A software framework that helps to improve the task of training data generation has several different requirements to meet.	It is hard to understand the design decisions that have impacted the assistance system component without considering the design decisions for the whole annotation framework. Therefore the following sections will focus on the assistance system, but also provides insights into the design process of the \ac{DALPHI} framework as a whole.
+
+	\input{2-1-conception.tex}
+	\input{2-2-implementation.tex}

@@ -1,0 +1,70 @@
+\newcommand{\signature}[2]{%
+	\hspace*{-1.5mm}
+	#1, \today\vspace{-1.5mm}\\
+	\rule{\textwidth}{.4pt}
+	\begin{scriptsize}
+	Ort, Datum
+	\end{scriptsize}
+	\hspace*{40mm}
+	#2
+}
+
+\newcommand{\thetitle}{%
+	Efficiency Evaluation of an Assistance System for Text Annotation
+}
+
+\newcommand{\theauthor}{%
+	Robert Philipp Greinacher
+}
+
+\newcommand{\thedate}{%
+	\today
+}
+
+\newcommand{\thechair}{%
+	Department of Psychology and Ergonomics: \\
+	Chair of Cognitive Psychology and Cognitive Ergonomics, \\
+	Institute of Software Engineering and Theoretical Computer Science: \\
+	Machine Learning
+}
+
+\newcommand{\thesupervisor}{%
+	Supervisors:\\
+	Prof. Dr. Manfred Thüring and \\
+	Prof. Dr. Klaus-Robert Müller
+}
+
+\newcommand{\lqq}{``}
+\newcommand{\rqq}{''\xspace}
+
+\newcommand{\singleFig}[4]{
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=10cm]{assets/#1}
+		\caption{#2}%
+		\label{fig:#3}%
+	\end{figure}
+}
+
+\newcommand{\singleFullSizeFig}[4]{
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=14.5cm]{assets/#1}
+		\caption{#2}%
+		\label{fig:#3}%
+	\end{figure}
+}
+
+\definecolor{White}{rgb}{1,1,1}
+\definecolor{HighlightGreen}{rgb}{0.58,0.71,0.29}
+\definecolor{HighlightBlue}{rgb}{0.35,0.4,0.51}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+
+\renewcommand{\arraystretch}{1.5}
+
+\def\UrlBreaks{\do\/\do-}
+
+\newcommand{\urlWithDate}[1]{\url{#1} (last date of retrieval: \thedate)}
+
+\interfootnotelinepenalty=10000

@@ -1,0 +1,101 @@
+\subsection{Questionnaires}
+	The evaluation of the questionnaires was an explorative analysis since we did not have any hypothesis regarding the questions we asked. We processed the data in the same way as the data regarding the performance dimensions: We calculated differences of blocks with the assistance system and blocks without the assistance.
+
+	We showed that the assistance system can decrease the perceived workload of the annotators -- if its suggestions are very accurate. Furthermore, we found that the perceived monotony of the annotators won't change, no matter what accuracy level the assistance has had or if it was present at all.
+
+	\subsubsection{Perception of Workload}
+		We started the evaluation of the questionnaires similar to how we proceeded with the performance dimensions. First, we conducted three t-tests for each of the assistance level in order to see whether there is a significant influence of the assistance system regarding the perceived workload of the participants. Figure~\ref{fig:AnalysisWorkload} shows the perceived workload in respect to the three different assistance levels.
+
+		\singleFig{4/analysis_workload_overall.png}{All three levels of assistance regarding the perceived workload of the subjects. The height of each bar is the mean value of the condition, the whiskers depict the standard error of the mean in both directions.}{AnalysisWorkload}
+
+		\paragraph{Three Independent T-Tests}
+		For the following three tests we used a significance level of \(\alpha = 0.05\). We starte with the evaluation of the workload differences of an assistance system with 10\% correct suggestions and no assistance system. There was no significant difference, \(t(21) = 0.941, p = 0.357\ (M = 0.16, SD = 0.793)\), so the null hypothesis is not rejected.
+
+		We continued with the evaluation of the workload differences of an assistance system with 50\% correct suggestions and no assistance system. There was no significant difference, \(t(21) = -1.286, p = 0.212\ (M = -0.32, SD = 1.160)\), so the null hypothesis is not rejected.
+
+		Finally we evaluated the workload differences of an assistance system with 90\% correct suggestions and no assistance system. There was a significant difference, \(t(21) = -2.870, p = 0.009\ (M = -0.70, SD = 1.151)\), so the null hypothesis is rejected at the given level of significance.
+
+		\paragraph{ANOVA for Main- and Interaction Effects}
+		Subsequently we computed an analysis of variance to find main- and interaction effects. Results are shown in Table~\ref{tab:anovaWorkload}.
+
+		\begin{table}[H]\centering
+			\caption{Results of the ANOVA, analyzing the perception of workload (via questionnaires).}
+			\begin{tabular}{lccccccc}
+				\toprule
+				Effect & DFn & DFd & SSn & SSd & F & p & significance \\
+				\midrule
+				Intercept 	& 1 & 63 & 10.9 & 138.6 & 5.0 & 0.0293 & \Checkmark \\
+				level				& 2 & 63 & 16.5 & 138.6 & 3.7  & 0.0291 & \Checkmark \\
+				block 			& 1 & 63 & 0.5  & 58.4 & 0.5  & 0.4723 & \XSolidBrush \\
+				level:block & 2 & 63 & 1.1 & 58.4 & 0.6 	& 0.5538 & \XSolidBrush \\
+				\bottomrule
+			\end{tabular}
+			\label{tab:anovaWorkload}
+		\end{table}
+		\(\Rightarrow\) The \(p\)-value of the level of the assistance system is less than \(\alpha = 0.05\), this result \textbf{is significant}; we found a main effect of the level of assistance. Besides this there is no significant main effect of the block (the point of time of measurement) and no significant interaction effect of the level and the block.
+
+
+
+	\subsubsection{Perception of Monotony}
+		The second evaluation of the questionnaires was about the participant's perceived monotony. Again, we first conducted three t-tests to see whether there is a significant influence of the assistance system regarding the perceived monotony. Figure~\ref{fig:AnalysisMonotony} shows the perceived monotony in respect to the three different assistance levels.
+
+		\singleFig{4/analysis_monotony_overall.png}{All three levels of assistance regarding the perceived monotony of the subjects. The height of each bar is the mean value of the condition, the whiskers depict the standard error of the mean in both directions.}{AnalysisMonotony}
+
+		\paragraph{Three Independent T-Tests}
+		For the following three tests we used a significance level of \(\alpha = 0.05\). We started with the evaluation of the monotony differences of an assistance system with 10\% correct suggestions and no assistance system. There was no significant difference, \(t(21) = 0.318, p = 0.754\ (M = 0.05, SD = 0.671)\), so the null hypothesis is not rejected.
+
+		We continued with the evaluation of the monotony differences of an assistance system with 50\% correct suggestions and no assistance system. There was no significant difference, \(t(21) = -1.405, p = 0.175\ (M = -0.34, SD = 1.138)\), so the null hypothesis is not rejected.
+
+		Finally we evaluated the monotony differences of an assistance system with 90\% correct suggestions and no assistance system. There was no significant difference, \(t(21) = 0.812, p = 0.426\ (M = 0.20, SD = 1.182)\), so the null hypothesis is not rejected.
+
+
+
+	\subsubsection{Perception of Reliability}
+		Figure~\ref{fig:AnalysisReliability} shows the perceived reliability in respect to the three different assistance levels.
+
+		\singleFig{4/analysis_reliability_overall.png}{All three levels of assistance regarding the perceived reliability of the assistance system. The height of each bar is the mean value of the condition, the whiskers depict the standard error of the mean in both directions.}{AnalysisReliability}
+
+		\paragraph{\ac{ANOVA} for Main- and Interaction Effects}
+		We computed an \ac{ANOVA} to find main- and interaction effects. Results are shown in Table~\ref{tab:anovaReliability}.
+
+		\begin{table}[H]\centering
+			\caption{Results of the \ac{ANOVA}, analyzing the perception of reliability (via questionnaires).}
+			\begin{tabular}{lccccccc}
+				\toprule
+				Effect & DFn & DFd & SSn & SSd & F & p & significance \\
+				\midrule
+				Intercept 	& 1 & 63 & 1939.7 & 123.8 & 987.285 & \(< 0.001\) & \Checkmark \\
+				level				& 2 & 63 & 111.6 & 123.8 & 28.392  & \(< 0.001\) & \Checkmark \\
+				block 			& 1 & 63 & 3.0  & 66.0 & 2.895  & 0.09 & \XSolidBrush \\
+				level:block & 2 & 63 & 0.01 & 66.0 & 0.007 	& 0.993 & \XSolidBrush \\
+				\bottomrule
+			\end{tabular}
+			\label{tab:anovaReliability}
+		\end{table}
+		\(\Rightarrow\) The \(p\)-value of the level of the assistance system is less than our significance level of \(\alpha = 0.05\), this result \textbf{is significant}; we found a main effect of the level of the assistance. Besides this there is no significant main effect of the block (the point of time of measurement) and no significant interaction effect of the level and the block.
+
+
+
+	\subsubsection{Perception of Correctness}
+		Figure~\ref{fig:AnalysisQuestionnaireCorrectness} shows the perceived correctness in respect to the three different assistance levels.
+
+		\singleFig{4/analysis_correctness_overall.png}{All three levels of assistance regarding the perceived correctness of the assistance system. The height of each bar is the mean value of the condition, the whiskers depict the standard error of the mean in both directions.}{AnalysisQuestionnaireCorrectness}
+
+		\paragraph{\ac{ANOVA} for Main- and Interaction Effects}
+		We computed an \ac{ANOVA} to find main- and interaction effects. Results are shown in Table~\ref{tab:anovaQuestionnaireCorrectness}.
+
+		\begin{table}[H]\centering
+			\caption{Results of the \ac{ANOVA}, analyzing the perception of correctness (via questionnaires).}
+			\begin{tabular}{lccccccc}
+				\toprule
+				Effect & DFn & DFd & SSn & SSd & F & p & significance \\
+				\midrule
+				Intercept 	& 1 & 63 & 439189.4 & 33567.8 & 824.271 & \(< 0.001\) & \Checkmark \\
+				level				& 2 & 63 & 42161.9 & 33567.8 & 39.565  & \(< 0.001\) & \Checkmark \\
+				block 			& 1 & 63 & 120.3  & 8321.7 & 0.911  & 0.344 & \XSolidBrush \\
+				level:block & 2 & 63 & 219.0 & 8321.7 & 0.829 	& 0.441 & \XSolidBrush \\
+				\bottomrule
+			\end{tabular}
+			\label{tab:anovaQuestionnaireCorrectness}
+		\end{table}
+		\(\Rightarrow\) The \(p\)-value of the level of the assistance system is less than our significance level of \(\alpha = 0.05\), this result \textbf{is significant}; we found a main effect of the level of the assistance. Besides this there is no significant main effect of the block (the point of time of measurement) and no significant interaction effect of the level and the block.

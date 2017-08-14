@@ -1,0 +1,26 @@
+\select@language {english}
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {1}{\ignorespaces Scores of the \acl {MEC} model evaluation, compared with results from the GermEval 2014 (GE) competition~\cite {benikova2014germeval}.\relax }}{21}{table.caption.50}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {2}{\ignorespaces Possible annotation errors. Green labels are person names, blue labels are company names.\relax }}{22}{table.caption.51}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3}{\ignorespaces Evaluation of the simulated assistances and our \acl {MEC} model.\relax }}{23}{table.caption.54}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4}{\ignorespaces Summary of the hypotheses\relax }}{32}{table.caption.64}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5}{\ignorespaces Results of the \ac {ANOVA}, analyzing the assistance system's influence on correctness.\relax }}{36}{table.caption.77}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {6}{\ignorespaces Results of the \ac {ANOVA}, analyzing the assistance system's influence on tempo.\relax }}{37}{table.caption.80}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {7}{\ignorespaces Results of the \ac {ANOVA}, analyzing the assistance system's influence on the rate of missed annotations.\relax }}{38}{table.caption.83}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {8}{\ignorespaces Results of the ANOVA, analyzing the perception of workload (via questionnaires).\relax }}{40}{table.caption.87}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {9}{\ignorespaces Results of the \ac {ANOVA}, analyzing the perception of reliability (via questionnaires).\relax }}{42}{table.caption.92}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {10}{\ignorespaces Results of the \ac {ANOVA}, analyzing the perception of correctness (via questionnaires).\relax }}{44}{table.caption.95}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {11}{\ignorespaces List of hypotheses, highlighting significant results.\relax }}{48}{table.caption.111}

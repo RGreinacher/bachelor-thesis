@@ -1,0 +1,86 @@
+\subsection{Differences of the Three Levels of Assistance}
+	\label{sec:resultsHypDF}
+	For a further analysis of the data, involving the different points of time measurement and looking for main- and interaction effects, we conducted an analysis of variance. As predictor variables we used the level of the assistance and the point of time. If a difference between the levels of assistance can be detected, the change of the assistance level would have a main effect on the respective performance dimension.
+
+	The test of the hypothesis groups D, E and F showed no significant differences. Neither when looking at the influence of the assistant system with 10\% correct suggestions compared to the system with 50\% correct suggestions, nor when looking at the assistant system with 50\% correct suggestions compared to the system with 90\% correct suggestions.
+
+	\subsubsection{Correctness}
+		Computing an analysis of variance yielded in the results shown in Table~\ref{tab:anovaCorrectness}.
+
+		\begin{table}[H]\centering
+			\caption{Results of the \ac{ANOVA}, analyzing the assistance system's influence on correctness.}
+			\begin{tabular}{lccccccc}
+				\toprule
+				Effect & DFn & DFd & SSn & SSd & F & p & significance \\
+				\midrule
+				Intercept 	& 1 & 63 & 1214.7 & 5853.3 & 13.1 & 0.0006 & \Checkmark \\
+				level				& 2 & 63 & 1006.8 & 5853.3 & 5.4  & 0.0067 & \Checkmark  \\
+				block 			& 1 & 63 & 141.2  & 4535.8 & 2.0  & 0.1663 & \XSolidBrush \\
+				level:block & 2 & 63 & 125.7 & 4535.8 & 0.9 	& 0.4226 & \XSolidBrush \\
+				\bottomrule
+			\end{tabular}
+			\label{tab:anovaCorrectness}
+		\end{table}
+		\(\Rightarrow\) The \(p\)-value of the level of the assistance system is less than \(\alpha = 0.05\); this result \textbf{is significant}; we found a main effect of the level of the assistance. Besides this there is no significant main effect of the block (the point of time measurement) and no significant interaction effect of the level and the block.
+
+		\paragraph{Hypothesis Di}
+		\lqq The \(50\%\) correct assistance system will increase the influence it has on correctness, compared to the \(10\%\) correct assistance system.\rqq
+
+		We now carried out a contrast between assistance level 10\% and 50\% to validate our hypothesis Di. For this post-hoc test we adjusted the significance level to \(\alpha = 0.025\). There was no significant difference, \(t(37.328) = -2.042, p = 0.048\), so the null hypothesis is not rejected.
+
+		\paragraph{Hypothesis Dii}
+		\lqq The \(90\%\) correct assistance system will increase the influence it has on correctness, compared to the \(50\%\) correct assistance system.\rqq
+
+		To evaluate the hypothesis Dii, we carried out a second contrast between assistance level 50\% and 90\%. For this post-hoc test we adjusted the significance level to \(\alpha = 0.025\) as well. There was no significant difference, \(t(40.109) = -1.076, p = 0.289\), so the null hypothesis is not rejected.
+
+
+
+	\subsubsection{Tempo}
+		Computing an analysis of variance got us in the results shown in Table~\ref{tab:anovaTempo}.
+
+		\begin{table}[H]\centering
+			\caption{Results of the \ac{ANOVA}, analyzing the assistance system's influence on tempo.}
+			\begin{tabular}{lccccccc}
+				\toprule
+				Effect & DFn & DFd & SSn & SSd & F & p & significance \\
+				\midrule
+				Intercept 	& 1 & 63 & 138.5 & 1050.3 & 8.3 & 0.0054 & \Checkmark \\
+				level				& 2 & 63 & 157.8 & 1050.3 & 4.7  & 0.0122 & \Checkmark \\
+				block 			& 1 & 63 & 3.7  & 359.9 & 0.6  & 0.4237 & \XSolidBrush \\
+				level:block & 2 & 63 & 9.5 & 359.9 & 0.8 	& 0.4394 & \XSolidBrush \\
+				\bottomrule
+			\end{tabular}
+			\label{tab:anovaTempo}
+		\end{table}
+		\(\Rightarrow\) The \(p\)-value of the level of the assistance system is less than \(\alpha = 0.05\); this result \textbf{is significant}; we found a main effect of the level of the assistance. Besides this there is no significant main effect of the block (the point of time measurement) and no significant interaction effect of the level and the block.
+
+		\paragraph{Hypothesis Ei}
+		\lqq The \(50\%\) correct assistance system will increase the influence it has on tempo, compared to the \(10\%\) correct assistance system.\rqq
+
+		We carried out a contrast between assistance level 10\% and 50\% to validate our hypothesis Ei. For this post-hoc test we adjusted the significance level to \(\alpha = 0.025\). There was no significant difference, \(t(41.287) = 2.120, p = 0.040\), so the null hypothesis is not rejected.
+
+		\paragraph{Hypothesis Eii}
+		\lqq The \(90\%\) correct assistance system will increase the influence it has on tempo, compared to the \(50\%\) correct assistance system.\rqq
+
+		To evaluate the hypothesis Eii, we carried out a second contrast between assistance level 50\% and 90\%. For this post-hoc test we adjusted the significance level to \(\alpha = 0.025\) as well. There was no significant difference, \(t(27.286) = 0.34, p = 0.740\), so the null hypothesis is not rejected.
+
+
+
+	\subsubsection{Misses}
+		Computing an analysis of variance produced in the results shown in Table~\ref{tab:anovaMisses}.
+
+		\begin{table}[H]\centering
+			\caption{Results of the \ac{ANOVA}, analyzing the assistance system's influence on the rate of missed annotations.}
+			\begin{tabular}{lccccccc}
+				\toprule
+				Effect & DFn & DFd & SSn & SSd & F & p & significance \\
+				\midrule
+				Intercept 	& 1 & 63 & 1007.3 & 3988.8 & 15.9 & 0.0002 & \Checkmark \\
+				level				& 2 & 63 & 125.8 & 3988.8 & 1.0  & 0.3759 & \XSolidBrush \\
+				block 			& 1 & 63 & 152.6  & 2055.1 & 4.7  & 0.0343 & \Checkmark  \\
+				level:block & 2 & 63 & 13.0 & 2055.1 & 0.2 	& 0.8197 & \XSolidBrush \\
+				\bottomrule
+			\end{tabular}
+			\label{tab:anovaMisses}
+		\end{table}
+		\(\Rightarrow\) The \(p\)-value of the block of the assistance system is less than \(\alpha = 0.05\); this result \textbf{is significant}; we found a main effect of the point of time measurement. Besides this there is no significant main effect of the level of the assistance system  and no significant interaction effect of the level and the block.
