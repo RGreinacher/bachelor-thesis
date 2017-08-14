@@ -18,24 +18,12 @@ Wir zeigen, dass ein Assistenzsystem mit 50% oder 90% richtigen Vorschlägen bei
 
 Die menschliche Leistung bei Textannotationen kann durch ein automatisches Assistenzsystem verbessert werden –- wenn es eine hohe Treffsicherheit in seinen Vorschlägen hat.
 
-# This Repo
+## Research Gate, DOI and Bibtex
 
-This repo contains all relevant data of my [thesis](https://github.com/RGreinacher/bachelor-thesis/tree/master/Thesis/Thesis.pdf) I wrote to get my Bachelor of Science degree 🎓 in Computer Science at the Technische Universität Berlin. This repo contains the 📈 [data set](https://github.com/RGreinacher/bachelor-thesis/tree/master/Studie/Data) of the study we conducted. All personal information of the participants are not disclosed! It only contains the complete analysis of the annotation task.
-### What is intentionally missing
-
-The model evaluation (`Apps/Model Evaluation/*.py`) won't run out of the box. These scripts need several dependencies I won't provide. But they are free and can be found here:
-
-- [German dictionary](https://sourceforge.net/projects/germandict/files/)
-- [German NER Training Corpus](https://sites.google.com/site/germeval2014ner/data)
-- [NLTK Classifier Based German Tagger](https://github.com/ptnplanet/NLTK-Contributions/tree/master/ClassifierBasedGermanTagger)
-
-### DOI
+[This thesis at Research Gate](https://www.researchgate.net/publication/319103317_Efficiency_Evaluation_of_an_Assistance_System_for_Text_Annotation)
 
 DOI: 10.13140/RG.2.2.25373.20969
 
-### Bibtex
-
-I'd would be pleased if you want to use my work. Pleas use the following Bibtex for citation:
 
 ```
 @unpublished{greinacher2017AnnotAssist,
@@ -46,3 +34,14 @@ I'd would be pleased if you want to use my work. Pleas use the following Bibtex 
   year = {2017}
 }
 ```
+
+# This Repo
+
+This repo contains all relevant data of my [thesis](https://github.com/RGreinacher/bachelor-thesis/tree/master/Thesis/Thesis.pdf) I wrote to get my Bachelor of Science degree 🎓 in Computer Science at the Technische Universität Berlin. This repo contains the 📈 [data set](https://github.com/RGreinacher/bachelor-thesis/tree/master/Studie/Data) of the study we conducted. All personal information of the participants are not disclosed! It only contains the complete analysis of the annotation task.
+### What is intentionally missing
+
+The model evaluation (`Apps/Model Evaluation/*.py`) won't run out of the box. These scripts need several dependencies I won't provide. But they are free and can be found here:
+
+- [German dictionary](https://sourceforge.net/projects/germandict/files/)
+- [German NER Training Corpus](https://sites.google.com/site/germeval2014ner/data)
+- [NLTK Classifier Based German Tagger](https://github.com/ptnplanet/NLTK-Contributions/tree/master/ClassifierBasedGermanTagger)
