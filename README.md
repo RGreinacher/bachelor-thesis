@@ -29,6 +29,10 @@ The model evaluation (`Apps/Model Evaluation/*.py`) won't run out of the box. Th
 - [German NER Training Corpus](https://sites.google.com/site/germeval2014ner/data)
 - [NLTK Classifier Based German Tagger](https://github.com/ptnplanet/NLTK-Contributions/tree/master/ClassifierBasedGermanTagger)
 
+### DOI
+
+DOI: 10.13140/RG.2.2.25373.20969
+
 ### Bibtex
 
 I'd would be pleased if you want to use my work. Pleas use the following Bibtex for citation:
