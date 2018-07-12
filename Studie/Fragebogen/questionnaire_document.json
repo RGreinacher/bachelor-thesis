@@ -1,0 +1,226 @@
+{
+  "id": "questionnaire_document.json",
+  "data": [
+    {
+      "title": "Demografische Nachbefragung",
+      "description": "Bitte beantworte kurz folgende Fragen über dich. Diese, sowie alle anderen erhobenen Daten werden nur anonymisiert gespeichert und weiterverarbeitet.",
+      "questions": [
+        {
+          "title": "Welchem Geschlecht fühlst du dich zugehörig?",
+          "mandatory": true,
+          "scale": "interval",
+          "id": "sex",
+          "values": [
+            { "value": "weiblich" },
+            { "value": "männlich" },
+            { "value": "weder noch" }
+          ],
+          "selected": -1
+        },
+        {
+          "title": "Wie alt bist du?",
+          "mandatory": true,
+          "id": "age",
+          "scale": "string",
+          "placeholder": "Gib dein Alter in Jahren an",
+          "selected": -1
+        },
+        {
+          "title": "Hast du eine Farbsehschwäche?",
+          "mandatory": true,
+          "scale": "interval",
+          "id": "color_blindness",
+          "values": [
+            { "value": "Ja" },
+            { "value": "Nein" }
+          ],
+          "selected": -1
+        },
+        {
+          "title": "Hattest du bereits Erfahrung mit Textannotationen?",
+          "mandatory": true,
+          "scale": "interval",
+          "id": "experience_text_annotation",
+          "values": [
+            { "value": "Ja" },
+            { "value": "Nein" }
+          ],
+          "selected": -1
+        },
+        {
+          "title": "Studierst du derzeit?",
+          "mandatory": true,
+          "scale": "interval",
+          "id": "currently_studying",
+          "values": [
+            { "value": "Ja" },
+            { "value": "Nein" }
+          ],
+          "selected": -1
+        },
+        {
+          "title": "Welches Fach studierst du derzeit?",
+          "mandatory": false,
+          "scale": "string",
+          "placeholder": "Gib den Nahmen deines Studienfachs an",
+          "id": "study_subject",
+          "dependence": {
+            "id": "currently_studying",
+            "selection_condition": "Ja"
+          },
+          "selected": -1
+        },
+        {
+          "title": "In welchem Fachsemester bist du?",
+          "mandatory": false,
+          "id": "study_semester",
+          "dependence": {
+            "id": "currently_studying",
+            "selection_condition": "Ja"
+          },
+          "scale": "string",
+          "placeholder": "Gib die Anzahl deiner Fachsemester an",
+          "selected": -1
+        },
+        {
+          "title": "Welcher Tätigkeit / welchem Beruf gehst du nach?",
+          "mandatory": false,
+          "scale": "string",
+          "placeholder": "Gib den Titel deiner Tätigkeit an",
+          "id": "profession",
+          "dependence": {
+            "id": "currently_studying",
+            "selection_condition": "Nein"
+          },
+          "selected": -1
+        },
+        {
+          "title": "Wie erfahren bist du im Umgang mit Computern?",
+          "mandatory": true,
+          "scale": "interval",
+          "id": "experience_computer",
+          "values": [
+            { "value": 1, "label": "Überhaupt nicht erfahren" },
+            { "value": 2 },
+            { "value": 3 },
+            { "value": 4 },
+            { "value": 5 },
+            { "value": 6 },
+            { "value": 7, "label": "Sehr erfahren" }
+          ],
+          "selected": -1
+        }
+      ]
+    },
+    {
+      "title": "Zwischenbefragung",
+      "description": "Bitte beantworte kurz folgende Fragen über den vorhergehenden Annotationsblock. Denke bitte nicht lange über die Antworten nach, sondern gib die Einschätzung ab, die dir spontan in den Sinn kommt.",
+      "questions": [
+        {
+          "title": "Wie beansprucht fühlst du dich?",
+          "mandatory": true,
+          "scale": "interval",
+          "id": "stress",
+          "values": [
+            { "value": 1, "label": "Überhaupt nicht beansprucht" },
+            { "value": 2 },
+            { "value": 3 },
+            { "value": 4 },
+            { "value": 5 },
+            { "value": 6 },
+            { "value": 7, "label": "Sehr beansprucht" }
+          ],
+          "selected": -1
+        },
+        {
+          "title": "Wie monoton empfandst du die Annotation des vergangenen Blocks?",
+          "mandatory": true,
+          "scale": "interval",
+          "id": "monotonous",
+          "values": [
+            { "value": 1, "label": "Überhaupt nicht monoton" },
+            { "value": 2 },
+            { "value": 3 },
+            { "value": 4 },
+            { "value": 5 },
+            { "value": 6 },
+            { "value": 7, "label": "Sehr monoton" }
+          ],
+          "selected": -1
+        }
+      ]
+    },
+    {
+      "title": "Zwischenbefragung",
+      "description": "Bitte beantworte kurz folgende Fragen über den vorhergehenden Annotationsblock. Denke bitte nicht lange über die Antworten nach, sondern gib die Einschätzung ab, die dir spontan in den Sinn kommt.",
+      "questions": [
+        {
+          "title": "Wie beansprucht fühlst du dich?",
+          "mandatory": true,
+          "scale": "interval",
+          "id": "stress",
+          "values": [
+            { "value": 1, "label": "Überhaupt nicht beansprucht" },
+            { "value": 2 },
+            { "value": 3 },
+            { "value": 4 },
+            { "value": 5 },
+            { "value": 6 },
+            { "value": 7, "label": "Sehr beansprucht" }
+          ],
+          "selected": -1
+        },
+        {
+          "title": "Wie monoton empfandst du die Annotation des vergangenen Blocks?",
+          "mandatory": true,
+          "scale": "interval",
+          "id": "monotonous",
+          "values": [
+            { "value": 1, "label": "Überhaupt nicht monoton" },
+            { "value": 2 },
+            { "value": 3 },
+            { "value": 4 },
+            { "value": 5 },
+            { "value": 6 },
+            { "value": 7, "label": "Sehr monoton" }
+          ],
+          "selected": -1
+        },
+        {
+          "title": "Wie zuverlässig schätzt du das Assistenzsystem, das Annotationsvorschläge generiert, ein?",
+          "mandatory": true,
+          "scale": "interval",
+          "id": "reliability",
+          "values": [
+            { "value": 1, "label": "Überhaupt nicht zuverlässig" },
+            { "value": 2 },
+            { "value": 3 },
+            { "value": 4 },
+            { "value": 5 },
+            { "value": 6 },
+            { "value": 7, "label": "Sehr zuverlässig" }
+          ],
+          "selected": -1
+        },
+        {
+          "title": "Wie viele Annotationen hat das Assistenzsystem korrekt gemacht?",
+          "mandatory": true,
+          "id": "correctness",
+          "scale": "ratio",
+          "value_unit": "%",
+          "bounds": {
+    				"lower": {
+    					"value": 0,
+    					"label": "gar keine"
+    				},
+    				"upper": {
+    					"value": 100,
+    					"label": "alle vollständig korrekt"
+    				}
+    			},
+          "selected": -1
+        }
+      ]
+    }
+  ]
+}
